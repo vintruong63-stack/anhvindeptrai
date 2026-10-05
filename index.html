@@ -1,1 +1,1151 @@
 
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>💖 Gần 4 Năm Bên Nhau 💖</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    overflow-x:hidden;
+    font-family:"Segoe UI",Arial,sans-serif;
+    color:white;
+
+    background:
+        radial-gradient(circle at 10% 10%,#ff00cc,transparent 28%),
+        radial-gradient(circle at 90% 15%,#00eaff,transparent 28%),
+        radial-gradient(circle at 50% 90%,#ff0066,transparent 35%),
+        linear-gradient(135deg,#12002f,#39005e,#ff006e);
+}
+
+
+/* =========================
+   SAO LẤP LÁNH
+========================= */
+
+.stars{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:1;
+}
+
+.star{
+    position:absolute;
+    width:4px;
+    height:4px;
+    border-radius:50%;
+    background:white;
+
+    box-shadow:
+        0 0 8px white,
+        0 0 20px #fff;
+
+    animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{
+        opacity:.15;
+        transform:scale(.5);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1.5);
+    }
+}
+
+
+/* =========================
+   TRANG CHÍNH
+========================= */
+
+.main{
+    position:relative;
+
+    width:92%;
+    max-width:850px;
+
+    margin:50px auto;
+
+    padding:55px 40px;
+
+    text-align:center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.18),
+            rgba(255,0,150,.10)
+        );
+
+    border:2px solid rgba(255,255,255,.5);
+
+    border-radius:40px;
+
+    backdrop-filter:blur(25px);
+
+    box-shadow:
+        0 0 25px #ff00cc,
+        0 0 60px rgba(255,0,150,.5),
+        inset 0 0 40px rgba(255,255,255,.08);
+
+    z-index:5;
+
+    animation:appear 1.5s ease;
+}
+
+@keyframes appear{
+
+    from{
+        opacity:0;
+        transform:translateY(60px) scale(.9);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+
+/* =========================
+   VIỀN TRANG TRÍ
+========================= */
+
+.main::before{
+
+    content:"💖 ✨ 💕 ✨ 💖 ✨ 💕";
+
+    position:absolute;
+
+    top:-20px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    white-space:nowrap;
+
+    font-size:24px;
+
+    padding:5px 20px;
+
+    background:linear-gradient(
+        90deg,
+        #ff0080,
+        #7b00ff,
+        #00eaff,
+        #ff0080
+    );
+
+    border-radius:30px;
+
+    box-shadow:
+        0 0 20px #ff00cc,
+        0 0 40px #ff0080;
+}
+
+
+/* =========================
+   TIM LỚN
+========================= */
+
+.heart-main{
+
+    font-size:100px;
+
+    margin-bottom:10px;
+
+    animation:
+        heartbeat 1.1s infinite;
+
+    filter:
+        drop-shadow(0 0 10px white)
+        drop-shadow(0 0 30px #ff00cc)
+        drop-shadow(0 0 60px #ff0066);
+}
+
+@keyframes heartbeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.22);
+    }
+}
+
+
+/* =========================
+   TIÊU ĐỀ
+========================= */
+
+h1{
+
+    font-size:44px;
+
+    margin-bottom:35px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fff,
+            #ff8de1,
+            #fff,
+            #7fffff,
+            #fff
+        );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:shine 4s linear infinite;
+
+    text-shadow:
+        0 0 20px rgba(255,255,255,.8);
+}
+
+@keyframes shine{
+
+    from{
+        background-position:0%;
+    }
+
+    to{
+        background-position:300%;
+    }
+}
+
+
+/* =========================
+   DÒNG THỜI GIAN
+========================= */
+
+.years{
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    gap:10px;
+
+    margin:25px 0 35px;
+
+    flex-wrap:wrap;
+}
+
+.year{
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.12);
+
+    border:1px solid rgba(255,255,255,.4);
+
+    box-shadow:
+        0 0 15px rgba(255,0,200,.5);
+
+    font-weight:bold;
+
+    animation:pulseBox 2s infinite;
+}
+
+.arrow{
+    font-size:25px;
+}
+
+@keyframes pulseBox{
+
+    50%{
+        box-shadow:
+            0 0 25px #ff00cc;
+    }
+}
+
+
+/* =========================
+   NỘI DUNG
+========================= */
+
+.message{
+
+    font-size:18px;
+
+    line-height:2;
+
+    text-align:center;
+}
+
+
+/* =========================
+   Ô KỶ NIỆM
+========================= */
+
+.memory{
+
+    margin:30px 0;
+
+    padding:25px;
+
+    border-radius:25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.16),
+            rgba(255,0,180,.10)
+        );
+
+    border:1px solid rgba(255,255,255,.35);
+
+    box-shadow:
+        inset 0 0 20px rgba(255,255,255,.05),
+        0 0 25px rgba(255,0,200,.25);
+
+    transition:.4s;
+}
+
+.memory:hover{
+
+    transform:
+        translateY(-5px)
+        scale(1.02);
+
+    box-shadow:
+        0 0 30px #ff00cc,
+        0 0 50px rgba(255,0,200,.5);
+}
+
+.memory-title{
+
+    font-size:25px;
+
+    font-weight:bold;
+
+    margin-bottom:10px;
+
+    color:#fff;
+
+    text-shadow:
+        0 0 10px #ff00cc,
+        0 0 20px #ff0066;
+}
+
+
+/* =========================
+   CÂU NHẤN
+========================= */
+
+.highlight{
+
+    margin:30px 0;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    color:white;
+
+    text-shadow:
+        0 0 5px white,
+        0 0 15px #ff00cc,
+        0 0 35px #ff0066;
+
+    animation:pulseText 2s infinite;
+}
+
+@keyframes pulseText{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.05);
+    }
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline{
+
+    margin:40px 0;
+
+    text-align:left;
+
+    border-left:3px solid #ff4dcc;
+
+    padding-left:25px;
+}
+
+.timeline-item{
+
+    position:relative;
+
+    margin-bottom:30px;
+
+    padding:20px;
+
+    background:rgba(255,255,255,.10);
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,.25);
+
+    box-shadow:
+        0 0 20px rgba(255,0,200,.2);
+}
+
+.timeline-item::before{
+
+    content:"❤️";
+
+    position:absolute;
+
+    left:-42px;
+
+    top:20px;
+
+    font-size:22px;
+
+    filter:
+        drop-shadow(0 0 10px #ff00cc);
+}
+
+.timeline-item h3{
+
+    margin-bottom:8px;
+
+    font-size:22px;
+
+    color:#ffd6f4;
+
+}
+
+
+/* =========================
+   NÚT
+========================= */
+
+button{
+
+    margin-top:35px;
+
+    padding:18px 42px;
+
+    border:none;
+
+    border-radius:50px;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff0080,
+            #ff00cc,
+            #7000ff,
+            #00d9ff,
+            #ff0080
+        );
+
+    background-size:300%;
+
+    box-shadow:
+        0 0 20px #ff00cc,
+        0 0 45px rgba(255,0,150,.6);
+
+    animation:
+        buttonGlow 3s linear infinite,
+        buttonPulse 1.5s infinite;
+}
+
+@keyframes buttonGlow{
+
+    from{
+        background-position:0%;
+    }
+
+    to{
+        background-position:300%;
+    }
+}
+
+@keyframes buttonPulse{
+
+    50%{
+        transform:scale(1.08);
+    }
+}
+
+button:hover{
+    transform:scale(1.15);
+}
+
+
+/* =========================
+   TIM BAY
+========================= */
+
+.flying-heart{
+
+    position:fixed;
+
+    bottom:-60px;
+
+    pointer-events:none;
+
+    z-index:3;
+
+    animation:flyUp linear forwards;
+
+    filter:
+        drop-shadow(0 0 10px #ff00cc)
+        drop-shadow(0 0 25px #ff0066);
+}
+
+@keyframes flyUp{
+
+    0%{
+        transform:
+            translateY(0)
+            rotate(0deg)
+            scale(.5);
+
+        opacity:0;
+    }
+
+    15%{
+        opacity:1;
+    }
+
+    100%{
+        transform:
+            translateY(-120vh)
+            rotate(720deg)
+            scale(1.5);
+
+        opacity:0;
+    }
+}
+
+
+/* =========================
+   MÀN HÌNH CUỐI
+========================= */
+
+#finalScreen{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:30px;
+
+    text-align:center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #ff00cc,
+            #6500a8,
+            #09001c
+        );
+
+    z-index:100;
+
+    animation:fadeIn 1s;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+
+.final-content{
+
+    width:95%;
+    max-width:800px;
+}
+
+.final-heart{
+
+    font-size:120px;
+
+    animation:heartbeat .8s infinite;
+
+    filter:
+        drop-shadow(0 0 20px white)
+        drop-shadow(0 0 60px #ff00cc)
+        drop-shadow(0 0 100px #ff0066);
+}
+
+.final-content h2{
+
+    font-size:55px;
+
+    margin:15px 0 25px;
+
+    text-shadow:
+        0 0 10px white,
+        0 0 30px #ff00cc,
+        0 0 60px #ff0066;
+}
+
+.final-content p{
+
+    font-size:20px;
+
+    line-height:2;
+}
+
+.forever{
+
+    margin-top:30px;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    text-shadow:
+        0 0 10px white,
+        0 0 30px #ff00cc,
+        0 0 60px #ff0066;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    .main{
+        padding:45px 20px;
+        margin:35px auto;
+    }
+
+    h1{
+        font-size:30px;
+    }
+
+    .heart-main{
+        font-size:70px;
+    }
+
+    .message{
+        font-size:16px;
+    }
+
+    .highlight{
+        font-size:23px;
+    }
+
+    .final-content h2{
+        font-size:38px;
+    }
+
+    .final-heart{
+        font-size:85px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- SAO -->
+
+<div class="stars" id="stars"></div>
+
+
+<!-- =========================
+     TRANG KỶ NIỆM
+========================= -->
+
+<div class="main">
+
+    <div class="heart-main">
+        💖
+    </div>
+
+    <h1>
+        💕 GẦN 4 NĂM BÊN NHAU 💕
+    </h1>
+
+
+    <!-- MỐC THỜI GIAN -->
+
+    <div class="years">
+
+        <div class="year">
+            🌸 Ngày bắt đầu 06/02/2023
+        </div>
+
+        <div class="arrow">
+            →
+        </div>
+
+        <div class="year">
+            💕 Năm thứ 2
+        </div>
+
+        <div class="arrow">
+            →
+        </div>
+
+        <div class="year">
+            💖 Năm thứ 3
+        </div>
+
+        <div class="arrow">
+            →
+        </div>
+
+        <div class="year">
+            💍 Gần 4 năm
+        </div>
+
+    </div>
+
+
+    <div class="message">
+
+        Có một điều anh đã nghĩ rất lâu...
+
+        <br><br>
+
+        Vậy là chúng ta đã cùng nhau
+        đi qua gần 4 năm rồi.
+
+        <br><br>
+
+        Gần 4 năm...
+
+        <br>
+
+        Không quá dài để kể hết một đời,
+
+        <br>
+
+        nhưng đủ dài để chúng ta
+        trở thành một phần quan trọng
+        trong cuộc sống của nhau.
+
+    </div>
+
+
+    <!-- KỶ NIỆM 1 -->
+
+    <div class="memory">
+
+        <div class="memory-title">
+            🌸 Những ngày đầu tiên
+        </div>
+
+        Những ngày đầu chúng ta đến với nhau,
+        có lẽ chẳng ai nghĩ rằng
+        mình sẽ đi cùng nhau lâu đến như vậy.
+
+        <br><br>
+
+        Từ những cuộc nói chuyện đầu tiên,
+        những lần chờ tin nhắn,
+        những buổi đi chơi,
+        cho đến những điều rất nhỏ...
+
+        <br><br>
+
+        Tất cả đều trở thành
+        những mảnh ghép đẹp trong ký ức của anh.
+
+    </div>
+
+
+    <!-- KỶ NIỆM 2 -->
+
+    <div class="memory">
+
+        <div class="memory-title">
+            💕 Những năm tháng bên nhau
+        </div>
+
+        Chúng ta đã có những ngày rất vui.
+
+        <br>
+
+        Cũng có những ngày chẳng vui chút nào.
+
+        <br><br>
+
+        Có lúc cười thật nhiều,
+
+        <br>
+
+        có lúc giận nhau,
+
+        <br>
+
+        có lúc chẳng ai chịu nói với ai.
+
+        <br><br>
+
+        Nhưng rồi chúng ta vẫn tìm cách
+        để quay lại bên nhau.
+
+    </div>
+
+
+    <div class="highlight">
+
+        ❤️ Điều anh trân trọng nhất...
+
+    </div>
+
+
+    <!-- TIMELINE -->
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <h3>🌷 Những ngày đầu</h3>
+
+            Chúng ta bắt đầu bằng những điều
+            rất bình thường...
+
+            Nhưng chẳng hiểu sao,
+            em lại trở thành người
+            đặc biệt nhất.
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <h3>🌸 Những ngày cùng nhau</h3>
+
+            Cùng nhau đi chơi,
+            cùng nhau ăn uống,
+            cùng nhau nói những chuyện
+            chẳng đâu vào đâu...
+
+            Nhưng anh lại nhớ tất cả.
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <h3>💗 Những lần giận nhau</h3>
+
+            Không phải lúc nào chúng ta
+            cũng hiểu nhau.
+
+            Nhưng sau mỗi lần như vậy,
+            anh lại càng hiểu rằng
+            mình không muốn mất em.
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <h3>💍 Gần 4 năm</h3>
+
+            Nhìn lại tất cả,
+            anh chỉ muốn nói:
+
+            <br><br>
+
+            <b>
+                Cảm ơn em vì vẫn ở đây. ❤️
+            </b>
+
+        </div>
+
+    </div>
+
+
+    <div class="message">
+
+        Anh biết tình yêu sau gần 4 năm
+        không còn giống những ngày đầu.
+
+        <br><br>
+
+        Nhưng có một điều chưa bao giờ thay đổi...
+
+    </div>
+
+
+    <div class="highlight">
+
+        ❤️ ANH VẪN YÊU EM ❤️
+
+    </div>
+
+
+    <div class="message">
+
+        Và nếu được lựa chọn lại từ đầu...
+
+        <br><br>
+
+        Anh vẫn sẽ chọn gặp em.
+
+        <br>
+
+        Vẫn sẽ chọn yêu em.
+
+        <br>
+
+        Và vẫn sẽ chọn cùng em
+        đi tiếp đoạn đường phía trước.
+
+        <br><br>
+
+        Anh không biết tương lai sẽ có
+        bao nhiêu năm nữa...
+
+        <br><br>
+
+        Nhưng anh hy vọng:
+
+        <br><br>
+
+        <b>
+            Gần 4 năm sẽ thành 5 năm.
+            <br>
+            5 năm thành 10 năm.
+            <br>
+            Và rồi thật nhiều năm sau nữa...
+        </b>
+
+    </div>
+
+
+    <button onclick="openLove()">
+
+        💗 CÒN MỘT ĐIỀU ANH MUỐN NÓI 💗
+
+    </button>
+
+</div>
+
+
+<!-- =========================
+     MÀN HÌNH CUỐI
+========================= -->
+
+<div id="finalScreen">
+
+    <div class="final-content">
+
+        <div class="final-heart">
+            💖
+        </div>
+
+        <h2>
+            GẦN 4 NĂM RỒI... ❤️
+        </h2>
+
+        <p>
+
+            Cảm ơn em vì đã bước vào cuộc đời anh.
+
+            <br><br>
+
+            Cảm ơn em vì đã cùng anh
+            đi qua những năm tháng vừa qua.
+
+            <br><br>
+
+            Có những lúc chúng ta vui,
+            có những lúc chúng ta buồn,
+            có những lúc tưởng như chẳng thể hiểu nhau...
+
+            <br><br>
+
+            Nhưng sau tất cả...
+
+            <br><br>
+
+            <b>
+                Người anh vẫn muốn ở bên
+                vẫn là em.
+            </b>
+
+        </p>
+
+
+        <div class="forever">
+
+            💕 GẦN 4 NĂM CHỈ LÀ BẮT ĐẦU 💕
+
+            <br><br>
+
+            ❤️ ANH YÊU EM ❤️
+
+            <br><br>
+
+            Và anh mong rằng...
+
+            <br>
+
+            chúng ta sẽ còn có thật nhiều
+            những ngày kỷ niệm như thế này.
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+
+/* =========================
+   TẠO SAO
+========================= */
+
+for(let i=0;i<180;i++){
+
+    const star=document.createElement("div");
+
+    star.className="star";
+
+    star.style.left=
+        Math.random()*100+"vw";
+
+    star.style.top=
+        Math.random()*100+"vh";
+
+    star.style.animationDelay=
+        Math.random()*3+"s";
+
+    document.getElementById("stars")
+        .appendChild(star);
+}
+
+
+/* =========================
+   TIM BAY
+========================= */
+
+function createHeart(){
+
+    const heart=document.createElement("div");
+
+    heart.className="flying-heart";
+
+    const icons=[
+        "❤️",
+        "💕",
+        "💖",
+        "💗",
+        "💘",
+        "💝",
+        "💞",
+        "💓",
+        "✨",
+        "🌸",
+        "🌹"
+    ];
+
+    heart.innerHTML=
+        icons[
+            Math.floor(Math.random()*icons.length)
+        ];
+
+    heart.style.left=
+        Math.random()*100+"vw";
+
+    heart.style.fontSize=
+        (15+Math.random()*45)+"px";
+
+    heart.style.animationDuration=
+        (4+Math.random()*5)+"s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },9000);
+}
+
+setInterval(createHeart,180);
+
+
+/* =========================
+   MỞ MÀN HÌNH CUỐI
+========================= */
+
+function openLove(){
+
+    document.getElementById("finalScreen")
+        .style.display="flex";
+
+    for(let i=0;i<120;i++){
+
+        setTimeout(()=>{
+            createHeart();
+        },i*25);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
+```
+
